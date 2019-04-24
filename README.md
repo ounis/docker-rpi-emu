@@ -10,7 +10,7 @@ This project provides a dockerised (err, containerised) Qemu based emulated envi
 Please note that this is very new. It works pretty well uner linux and OSX for emulation and for creating images to deploy, but YMMV.  
 It's also not a very good docker container, requiring priveledged mode to mount loopback adaptors and qemu on the docker host. All the scripts here can be run on native linux if you're that way inclined.
 
-Check it out on [Github](https://github.com/ryankurte/docker-rpi-emu/) or [Dockerhub](https://hub.docker.com/r/ryankurte/docker-rpi-emu/)  
+Check it out on [Github](https://github.com/ounis/docker-rpi-emu/) or [Dockerhub](https://hub.docker.com/r/ounishatem/docker-rpi-emu/)  
 
 ![Example](https://raw.github.com/ryankurte/docker-rpi-emu/gh_pages/screenshots/02.png)
 

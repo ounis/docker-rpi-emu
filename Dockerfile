@@ -1,19 +1,29 @@
 FROM ubuntu
 
-MAINTAINER Ryan Kurte <ryankurte@gmail.com>
+MAINTAINER Hatem Ounis
 LABEL Description="Qemu based emulation for raspberry pi using loopback images"
 
 # Update package repository
-RUN apt-get update 
+RUN apt-get update
 
 # Install required packages
 RUN apt-get install -y --allow-unauthenticated \
     qemu \
-    qemu-user-static \ 
+    qemu-user-static \
     binfmt-support \
     parted \
     vim \
-    sudo
+    sudo \
+    wget \
+    cron \
+    gnupg2 \
+    apt-utils \
+    curl \
+    python \
+    python-pip \
+    python3 \
+    python3-pip \
+    net-tools
 
 # Clean up after apt
 RUN apt-get clean
@@ -27,5 +37,3 @@ WORKDIR /usr/rpi
 RUN mkdir -p /home/pi
 
 COPY scripts/* /usr/rpi/
-
-
